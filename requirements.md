@@ -62,13 +62,48 @@ Strona jednokolumnowa, wyśrodkowana. Kolejność sekcji:
 
 ## Wymagania wizualne
 
-Stronę należy odwzorować na podstawie wyglądu oryginału pod adresem https://www.internetowyszwagier.pl/. Elementy do dopasowania wzrokowo:
+Referencja wizualna: `screen.png` (zrzut ekranu oryginału).
 
-- **Kolory** — tło, tekst, przyciski, linki (odczytać z DevTools lub zrzutu ekranu)
-- **Typografia** — rodzina czcionek, rozmiary, grubości
-- **Układ** — marginesy, paddingi, wyrównanie (centered / left)
-- **Separatory** — wygląd linii rozdzielających sekcje
-- **Responsywność** — strona ma poprawnie wyglądać na mobile i desktop
+### Kolory
+- Tło: `#000000` (czysta czerń)
+- Tekst: `#ffffff` (czysta biel)
+- Przycisk kontaktowy: obramowanie `#ffffff`, tło `#000000`, tekst `#ffffff`
+
+### Typografia
+- Czcionka: monospace (Courier New lub system monospace) — stosowana do WSZYSTKICH elementów
+- Nagłówek `<h1>`: duży, wyrównany do lewej strony lub zajmuje pełną szerokość kontenera
+- Podtytuł: mniejszy, wyśrodkowany, dwa wiersze (`Coś nie działa ?` / `Naprawię to.`)
+- Reszta tekstu: monospace, rozmiar bazowy
+
+### Układ i spacing
+- Strona pionowo wyśrodkowana w viewporcie (lub z dużymi marginesami góra/dół)
+- Bardzo duże odstępy między sekcjami (whitespace jest kluczowym elementem designu)
+- Brak widocznych separatorów `<hr>` — sekcje oddzielone samym spacingiem
+- Przycisk kontaktowy: wyśrodkowany, obramowanie `1px solid #fff`, szerokość dopasowana do tekstu z paddingiem
+
+### Animacja nagłówka
+- Efekt maszyny do pisania: litery pojawiają się jedna po drugiej z prędkością **83ms/znak**
+- Migająca karetka (`|`) widoczna podczas pisania i po zakończeniu animacji (blink co 1s)
+
+### Elementy szczegółowe
+- Numer telefonu poprzedzony ikoną telefonu (emoji ☎ lub 📞)
+- Tekst telefonu i przycisk są osobnymi elementami (nie lista)
+- Przypis `* nie musimy być spokrewnieni`: mały, wyśrodkowany, duży odstęp od telefonu
+- Footer `Moja strona jest brzydka...`: bardzo mały tekst, na samym dole strony
+
+### Responsywność
+Strona musi poprawnie wyglądać na trzech breakpointach:
+
+| Urządzenie | Szerokość |
+|---|---|
+| Mobile | < 480px |
+| Tablet | 481px – 1024px |
+| Desktop | > 1024px |
+
+Wymagania dla każdego breakpointa:
+- **Mobile**: nagłówek `<h1>` zmniejszony, padding boczny min. 1rem, przycisk pełnej szerokości lub dopasowany
+- **Tablet**: układ jak desktop ale z mniejszymi rozmiarami czcionek
+- **Desktop**: nagłówek duży (ok. 2rem), pełne odstępy między sekcjami
 
 ---
 
